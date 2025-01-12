@@ -3,262 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT's Portfolio</title>
+    <title>L&D Head Portfolio – Vamsi Krishna</title>
     <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            box-sizing: border-box;
         }
 
-        h1, h2, h3 {
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
             color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        a:hover {
-            color: #ffd700;
-        }
-
-        /* Header Section */
-        header {
-            background-color: #fdd835; /* Vibrant Yellow */
+        /* Full Screen Hero Section */
+        .hero {
+            background-image: url('https://via.placeholder.com/1920x1080?text=L%26D+Excellence'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 4rem 0;
-            color: #333;
+            color: white;
+            position: relative;
         }
 
-        header h1 {
-            font-size: 3.5rem;
-            margin: 0;
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .content {
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #FFDD00;
             font-weight: 700;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
         }
 
-        header p {
-            margin: 10px 0;
-            font-size: 1.2rem;
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2e3b4e;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            z-index: 9999;
+        }
+
+        nav a {
+            color: #FFDD00;
+            text-decoration: none;
+            margin: 0 20px;
             font-weight: 600;
         }
 
-        /* Main Section Styling */
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
         section {
-            width: 100%;
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        section img, section video {
-            width: 100%;
-            max-width: 350px;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 1rem;
-            text-align: center;
+            padding: 80px 20px;
         }
 
         /* About Section */
-        #about {
-            text-align: center;
-        }
-
-        #about img {
-            border-radius: 50%;
-            max-width: 250px;
-            margin-bottom: 1rem;
-            border: 5px solid #fdd835;
-        }
-
-        #about .section-content {
-            text-align: left;
-            margin: auto;
-        }
-
-        /* Skills Section */
-        #skills ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        #skills ul li {
-            background: #f9f9f9;
-            margin: 10px 0;
-            padding: 12px 15px;
-            border-left: 5px solid #fdd835;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Achievements Section */
-        #achievements {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .achievement-graph {
-            width: 48%;
-            margin-bottom: 2rem;
-            border: 2px solid #fdd835;
-            border-radius: 8px;
-            padding: 1rem;
+        .about {
             background-color: #fff;
         }
 
-        .achievement-graph canvas {
-            width: 100%;
-            height: 300px;
-        }
-
-        /* Case Studies Section */
-        .case-studies a {
-            display: inline-block;
-            padding: 15px 25px;
-            background: #ffd700;
-            color: #333;
-            font-weight: bold;
-            border-radius: 5px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .case-studies a:hover {
-            background: #f57c00;
-            color: #fff;
-        }
-
-        /* Footer */
-        footer {
+        .about h2 {
+            font-size: 2.5rem;
+            color: #2e3b4e;
             text-align: center;
-            padding: 2rem 0;
-            background: #333;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        /* Infographics Section */
+        .infographics {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            padding: 40px 20px;
+        }
+
+        .infographic-card {
+            background-color: #FFDD00;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .infographic-card img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        /* Image Gallery (for Training Images) */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: auto;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .gallery img {
+            margin: 0 10px;
+            height: 250px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #2e3b4e;
             color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #FFDD00;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .infographics {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .infographic-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .gallery {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+
+            .infographic-card {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>ChatGPT's Portfolio</h1>
-        <p>Email: chatgpt@openai.com | Contact: +1-800-123-4567</p>
-    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#infographics">Infographics</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="content">
+            <h1>Vamsi Krishna – Head of Learning & Development</h1>
+            <p>Empowering Organizations Through Strategic Learning Solutions</p>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="section-content">
-            <img src="profile.jpg" alt="ChatGPT">
-            <h2>About Me</h2>
-            <p>
-                I'm ChatGPT, an AI-powered virtual assistant specializing in Learning & Development. 
-                I provide transformative learning experiences, tailored training programs, and leadership coaching.
-            </p>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            With over [X] years of experience in Learning & Development, I am dedicated to designing impactful training programs that drive organizational growth. My focus on leadership, skill development, and employee engagement has led to the successful transformation of various learning ecosystems.
+        </p>
+    </section>
+
+    <!-- Infographics Section -->
+    <section id="infographics" class="infographics">
+        <div class="infographic-card">
+            <img src="https://via.placeholder.com/100?text=Training" alt="Training Icon">
+            <h3>Training Programs</h3>
+            <p>Successfully launched and managed training programs for over 500 employees</p>
+        </div>
+        <div class="infographic-card">
+            <img src="https://via.placeholder.com/100?text=Leadership" alt="Leadership Icon">
+            <h3>Leadership Development</h3>
+            <p>Developed leaders who took on critical roles within the organization</p>
+        </div>
+        <div class="infographic-card">
+            <img src="https://via.placeholder.com/100?text=Engagement" alt="Engagement Icon">
+            <h3>Employee Engagement</h3>
+            <p>Increased employee satisfaction and retention by 30% through tailored learning</p>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="section-content">
-            <h2>Skills</h2>
-            <ul>
-                <li>Training Design & Development</li>
-                <li>Leadership Coaching</li>
-                <li>Employee Engagement</li>
-                <li>Workshop Facilitation</li>
-                <li>Performance Improvement</li>
-            </ul>
+    <!-- Gallery Section (for Training Images) -->
+    <section id="gallery">
+        <h2>Training Gallery</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/350x250?text=Training+Session+1" alt="Training Image 1">
+            <img src="https://via.placeholder.com/350x250?text=Training+Session+2" alt="Training Image 2">
+            <img src="https://via.placeholder.com/350x250?text=Training+Session+3" alt="Training Image 3">
+            <!-- Add more images as needed -->
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <div class="achievement-graph">
-            <h3>Number of Trainings Conducted</h3>
-            <canvas id="trainingsGraph"></canvas>
-        </div>
-        <div class="achievement-graph">
-            <h3>Total Training Manhours</h3>
-            <canvas id="manhoursGraph"></canvas>
-        </div>
-        <div class="achievement-graph">
-            <h3>Employees Upskilled</h3>
-            <canvas id="upskilledGraph"></canvas>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section id="case-studies">
-        <h2>Case Studies</h2>
-        <p>Explore my detailed case studies to understand my approach and results:</p>
-        <div class="case-studies">
-            <a href="case-studies.html">Click here to view Case Studies</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 ChatGPT Portfolio. All rights reserved.</p>
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>Contact Me: [Your Email] | [Your Phone Number]</p>
+        <p>LinkedIn: <a href="[LinkedIn Profile URL]" target="_blank">[Your LinkedIn]</a></p>
     </footer>
 
-    <!-- Chart.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Chart for Number of Trainings
-        const ctxTrainings = document.getElementById('trainingsGraph').getContext('2d');
-        const trainingsChart = new Chart(ctxTrainings, {
-            type: 'bar',
-            data: {
-                labels: ['FY 23-24', 'FY 24-25'],
-                datasets: [{
-                    label: 'Trainings Conducted',
-                    data: [150, 180],
-                    backgroundColor: '#f57c00'
-                }]
-            }
-        });
-
-        // Chart for Total Training Manhours
-        const ctxManhours = document.getElementById('manhoursGraph').getContext('2d');
-        const manhoursChart = new Chart(ctxManhours, {
-            type: 'line',
-            data: {
-                labels: ['FY 23-24', 'FY 24-25'],
-                datasets: [{
-                    label: 'Training Manhours',
-                    data: [2000, 2400],
-                    borderColor: '#fdd835',
-                    fill: false
-                }]
-            }
-        });
-
-        // Chart for Employees Upskilled
-        const ctxUpskilled = document.getElementById('upskilledGraph').getContext('2d');
-        const upskilledChart = new Chart(ctxUpskilled, {
-            type: 'pie',
-            data: {
-                labels: ['FY 23-24', 'FY 24-25'],
-                datasets: [{
-                    label: 'Employees Upskilled',
-                    data: [80, 95],
-                    backgroundColor: ['#fbc02d', '#f57c00']
-                }]
-            }
-        });
-    </script>
 </body>
 </html>
