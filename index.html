@@ -3,76 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L&D Head Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>L&D Head Portfolio – Vamsi Krishna</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background-image: url('https://via.placeholder.com/1920x1080?text=L%26D+Excellence'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #FFDD00;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.8em;
+            font-weight: 300;
+            margin-top: 15px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 0;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0;
+        }
+
+        .skills li {
+            background-color: #FFDD00;
+            color: #2e3b4e;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Achievements Section */
+        .achievements ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .achievements li {
+            font-size: 1.1em;
+            background-color: #f1f1f1;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 5px solid #FFDD00;
+            border-radius: 5px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #2e3b4e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #FFDD00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="title">Vamsi Krishna – L&D Head</h1>
-            <p class="subtitle">Shaping the Future of Learning & Development</p>
-        </div>
-    </header>
 
+    <!-- Landing Page Section -->
+    <section class="hero">
+        <div class="overlay">
+            <div class="container">
+                <h1 class="hero-title">Vamsi Krishna – L&D Head</h1>
+                <p class="hero-subtitle">Empowering the Future of Learning & Development</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
     <section class="about">
         <div class="container">
             <h2>About Me</h2>
             <p>
-                I am an experienced Learning and Development Head with a passion for creating impactful learning programs that align with organizational goals. With over [X] years in the L&D industry, I have led initiatives in employee growth, leadership development, and training innovation. My focus has always been on building scalable training solutions that empower employees and enhance organizational performance.
+                I am a passionate and result-driven Learning and Development leader with over [X] years of experience creating transformative training programs for global organizations. My expertise spans leadership development, employee engagement, strategic training design, and optimizing organizational performance through learning initiatives.
             </p>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section class="skills">
         <div class="container">
             <h2>Skills & Expertise</h2>
             <ul>
-                <li>Strategic Learning & Development</li>
-                <li>Leadership Development</li>
-                <li>Employee Engagement</li>
-                <li>Training Needs Analysis</li>
-                <li>Performance Management</li>
-                <li>Program Design & Implementation</li>
+                <li>Strategic L&D Leadership</li>
                 <li>Change Management</li>
-                <li>Mentorship and Coaching</li>
+                <li>Leadership Development</li>
+                <li>Employee Engagement & Retention</li>
+                <li>Training Design & Delivery</li>
+                <li>Performance Improvement</li>
+                <li>Project Management</li>
+                <li>Stakeholder Management</li>
             </ul>
         </div>
     </section>
 
+    <!-- Achievements Section -->
     <section class="achievements">
         <div class="container">
             <h2>Key Achievements</h2>
             <ul>
-                <li>Launched and scaled the SAP training program at SPL, improving team efficiency by 30%.</li>
-                <li>Developed a Sales Training Program that achieved 100% adherence across 5 sales teams after conducting refresher sessions.</li>
-                <li>Designed and implemented leadership training that successfully groomed 10+ future leaders within the organization.</li>
-                <li>Led the rebranding of the HR-L&D logo (Zygen), aligning it with SPL’s vision and values, which received positive feedback from stakeholders.</li>
-                <li>Improved employee engagement scores by 25% through a series of personalized and impactful training workshops.</li>
+                <li>Launched and scaled SAP training program at SPL, increasing team efficiency by 30%.</li>
+                <li>Developed and delivered a Sales Training Program, resulting in 100% adherence and improved sales performance.</li>
+                <li>Designed leadership training programs that groomed 10+ future leaders within the organization.</li>
+                <li>Rebranded HR-L&D logo (Zygen) to align with SPL’s vision, strengthening brand identity.</li>
+                <li>Improved employee engagement by 25% through innovative and personalized learning experiences.</li>
             </ul>
         </div>
     </section>
 
+    <!-- Professional Experience Section -->
     <section class="experience">
         <div class="container">
             <h2>Professional Experience</h2>
             <h3>Head of Learning & Development | Shriram Properties Limited</h3>
             <p><strong>Duration:</strong> [Month/Year] – Present</p>
             <p>
-                Spearheading the Learning & Development initiatives, focusing on skill development, leadership training, and fostering a culture of continuous learning. Collaborating with senior leadership to align training programs with organizational objectives, while ensuring impactful outcomes.
+                Leading global L&D initiatives, collaborating with stakeholders to create scalable training solutions. Focused on enhancing organizational performance through strategic training programs that drive employee growth.
             </p>
             <h3>Learning & Development Manager | [Company Name]</h3>
             <p><strong>Duration:</strong> [Month/Year] – [Month/Year]</p>
             <p>
-                Designed and implemented training programs that empowered employees across various levels to enhance their skills and contribute to business growth. Managed and scaled L&D processes in a global corporate environment.
+                Designed innovative learning programs that empowered employees at all levels. Worked across multiple departments to drive employee skill development, increasing organizational efficiency and engagement.
             </p>
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p class="footer-text">Contact: [Email] | [Phone]</p>
-            <p class="footer-text">LinkedIn: [Your LinkedIn Profile]</p>
+            <p>Contact: [Email] | [Phone]</p>
+            <p>LinkedIn: <a href="[LinkedIn Profile URL]" target="_blank">[Your LinkedIn]</a></p>
         </div>
     </footer>
+
 </body>
 </html>
