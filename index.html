@@ -50,7 +50,7 @@
 
         .hero h1 {
             font-size: 4rem;
-            color: #FFDD00;
+            color: #1E90FF; /* Light Blue */
             font-weight: 700;
             text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
         }
@@ -75,7 +75,7 @@
         }
 
         nav a {
-            color: #FFDD00;
+            color: #1E90FF;
             text-decoration: none;
             margin: 0 20px;
             font-weight: 600;
@@ -108,17 +108,47 @@
             line-height: 1.8;
         }
 
-        /* Infographics Section */
-        .infographics {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 40px;
-            padding: 40px 20px;
+        /* Skills Section */
+        .skills {
+            background-color: #fff;
+            padding: 60px 20px;
         }
 
-        .infographic-card {
-            background-color: #FFDD00;
+        .skills h2 {
+            font-size: 2.5rem;
+            color: #2e3b4e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .skills li {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            background-color: #e6f7ff; /* Light Blue Background */
+            padding: 60px 20px;
+        }
+
+        .achievements h2 {
+            font-size: 2.5rem;
+            color: #2e3b4e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .achievement-card {
+            background-color: #1E90FF; /* Light Blue */
             color: #fff;
             padding: 30px;
             border-radius: 10px;
@@ -128,12 +158,12 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .infographic-card img {
+        .achievement-card img {
             width: 100px;
             margin-bottom: 20px;
         }
 
-        /* Image Gallery (for Training Images) */
+        /* Gallery Section (for Training Images) */
         .gallery {
             display: flex;
             justify-content: center;
@@ -152,6 +182,34 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        /* Awards Section */
+        .awards {
+            background-color: #f4f4f9;
+            padding: 60px 20px;
+        }
+
+        .awards h2 {
+            font-size: 2.5rem;
+            color: #2e3b4e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .award-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: auto;
+        }
+
+        .award-gallery img {
+            margin: 0 15px;
+            height: 250px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         /* Footer Section */
         footer {
             background-color: #2e3b4e;
@@ -161,7 +219,7 @@
         }
 
         footer a {
-            color: #FFDD00;
+            color: #1E90FF;
             text-decoration: none;
             font-weight: 700;
         }
@@ -180,17 +238,21 @@
                 font-size: 1.2rem;
             }
 
-            .infographics {
+            .skills ul {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .infographic-card {
+            .achievement-card {
                 width: 80%;
                 margin-bottom: 20px;
             }
 
             .gallery {
+                flex-direction: column;
+            }
+
+            .award-gallery {
                 flex-direction: column;
             }
         }
@@ -209,7 +271,7 @@
                 margin: 0 10px;
             }
 
-            .infographic-card {
+            .achievement-card {
                 width: 100%;
             }
         }
@@ -220,8 +282,10 @@
     <!-- Navigation Bar -->
     <nav>
         <a href="#about">About</a>
-        <a href="#infographics">Infographics</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
         <a href="#gallery">Gallery</a>
+        <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -241,22 +305,36 @@
         </p>
     </section>
 
-    <!-- Infographics Section -->
-    <section id="infographics" class="infographics">
-        <div class="infographic-card">
-            <img src="https://via.placeholder.com/100?text=Training" alt="Training Icon">
-            <h3>Training Programs</h3>
-            <p>Successfully launched and managed training programs for over 500 employees</p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Leadership Development</li>
+            <li>Training Program Management</li>
+            <li>Employee Engagement</li>
+            <li>Learning Strategies</li>
+            <li>Performance Improvement</li>
+            <li>Change Management</li>
+        </ul>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <h2>Achievements</h2>
+        <div class="achievement-card">
+            <img src="https://via.placeholder.com/100?text=Hours" alt="Training Hours Icon">
+            <h3>Training Hours</h3>
+            <p>5000+ hours of training delivered</p>
         </div>
-        <div class="infographic-card">
-            <img src="https://via.placeholder.com/100?text=Leadership" alt="Leadership Icon">
-            <h3>Leadership Development</h3>
-            <p>Developed leaders who took on critical roles within the organization</p>
+        <div class="achievement-card">
+            <img src="https://via.placeholder.com/100?text=Upskilled" alt="Employees Upskilled Icon">
+            <h3>Employees Upskilled</h3>
+            <p>Over 1500 employees upskilled</p>
         </div>
-        <div class="infographic-card">
-            <img src="https://via.placeholder.com/100?text=Engagement" alt="Engagement Icon">
-            <h3>Employee Engagement</h3>
-            <p>Increased employee satisfaction and retention by 30% through tailored learning</p>
+        <div class="achievement-card">
+            <img src="https://via.placeholder.com/100?text=Growth" alt="Employee Growth Icon">
+            <h3>Employee Growth</h3>
+            <p>30% growth in employee performance (FY 23-24 to FY 24-25)</p>
         </div>
     </section>
 
@@ -271,10 +349,20 @@
         </div>
     </section>
 
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <h2>Awards</h2>
+        <div class="award-gallery">
+            <img src="https://via.placeholder.com/250x250?text=Award+1" alt="Award Image 1">
+            <img src="https://via.placeholder.com/250x250?text=Award+2" alt="Award Image 2">
+            <img src="https://via.placeholder.com/250x250?text=Award+3" alt="Award Image 3">
+            <!-- Add more awards as needed -->
+        </div>
+    </section>
+
     <!-- Footer Section -->
-    <footer id="contact">
-        <p>Contact Me: [Your Email] | [Your Phone Number]</p>
-        <p>LinkedIn: <a href="[LinkedIn Profile URL]" target="_blank">[Your LinkedIn]</a></p>
+    <footer>
+        <p>For more information, contact me at <a href="mailto:vamsikrishna@email.com">vamsikrishna@email.com</a></p>
     </footer>
 
 </body>
