@@ -190,11 +190,11 @@
         .contact label {
             display: block;
             margin-bottom: 5px;
+            font-weight: bold.
             font-weight: bold;
         }
 
-        .contact input,
-        .contact textarea {
+        .contact input, .contact textarea, .contact button {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -204,12 +204,10 @@
 
         .contact button {
             background: #1e90ff;
-            color: #fff;
+            color: white;
+            font-size: 1rem;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
             cursor: pointer;
-            transition: background 0.3s;
         }
 
         .contact button:hover {
@@ -219,55 +217,117 @@
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div>Portfolio</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#growth">Growth</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="#rewards">Rewards</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- Navigation -->
+<nav>
+    <h1>Vamsi Krishna Portfolio</h1>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#growth">Growth</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- Banner -->
-    <section class="banner">
-        <div class="banner-content">
-            <h1>Vamsi Krishna</h1>
-            <p>Empowering Growth Through Learning & Development</p>
-        </div>
-    </section>
+<!-- Banner -->
+<section class="banner">
+    <div class="banner-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your Partner in Learning & Development Excellence</p>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>A passionate L&D leader with a proven track record in enhancing employee skills, fostering growth, and driving organizational success.</p>
-    </section>
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/200?text=Profile+Picture" alt="Profile Picture">
+    <p>Hello! I am Vamsi Krishna, an L&D enthusiast focused on nurturing talent and driving growth.</p>
+</section>
 
-    <!-- Growth Section -->
-    <section id="growth">
-        <h2>Growth Timeline</h2>
-        <div class="timeline">
-            <div class="timeline-event">
-                <div class="timeline-content">
-                    <h3>2010</h3>
-                    <p>Started career as Training Coordinator</p>
-                </div>
+<!-- Growth Section -->
+<section id="growth">
+    <h2>Growth Timeline</h2>
+    <div class="timeline">
+        <div class="timeline-event">
+            <div class="timeline-content">
+                <h3>2024</h3>
+                <p>Launched SAP Training Initiative</p>
             </div>
         </div>
-    </section>
+        <div class="timeline-event">
+            <div class="timeline-content">
+                <h3>2023</h3>
+                <p>Awarded for Urja Idea Bank</p>
+            </div>
+        </div>
+        <!-- Add more events as needed -->
+    </div>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-    </section>
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="infographic">
+        <div>
+            <h3>Leadership</h3>
+            <p>Driving effective teams</p>
+        </div>
+        <div>
+            <h3>Instructional Design</h3>
+            <p>ADDIE & TTT Expertise</p>
+        </div>
+        <!-- Add more skills -->
+    </div>
+</section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-    </section>
+<!-- Achievements Section -->
+<section id="achievements">
+    <h2>Achievements</h2>
+    <p>Highlighting key milestones:</p>
+    <ul>
+        <li>Received SPL NXT Leadership Award 2024</li>
+        <li>Completed 3-month Sales Workshop with 100% adherence</li>
+        <li>Podium Finish in Urja Contest</li>
+    </ul>
+</section>
+
+<!-- Case Studies Section -->
+<section id="case-studies">
+    <h2>Case Studies</h2>
+    <p>Examples of impactful projects:</p>
+    <ul>
+        <li><strong>Sales Workshop:</strong> Improved adherence by 80% post-training</li>
+        <li><strong>LinkedIn Learning Program:</strong> Achieved 100% utilization of licenses</li>
+    </ul>
+</section>
+
+<!-- Rewards Section -->
+<section id="rewards">
+    <h2>Rewards</h2>
+    <p>Recognized by the organization and beyond:</p>
+    <img src="https://via.placeholder.com/200?text=Award+1" alt="Award 1">
+    <img src="https://via.placeholder.com/200?text=Award+2" alt="Award 2">
+    <!-- Add more images -->
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Your Email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 
 </body>
 </html>
