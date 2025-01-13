@@ -13,15 +13,21 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f4f4f4;
         }
         header {
+            position: relative;
             background-image: url('https://drive.google.com/uc?id=1F-9x8MqPPKnH4Z-s4qt3QM8nn0-xW4v-');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
             padding: 50px;
-            position: relative;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
         }
         header::before {
             content: '';
@@ -31,16 +37,16 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
+            z-index: 0;
         }
         header h1 {
             font-size: 36px;
             margin: 0;
-            z-index: 2;
+            z-index: 1;
         }
         header p {
             font-size: 20px;
-            z-index: 2;
+            z-index: 1;
         }
         section {
             padding: 20px;
@@ -48,49 +54,44 @@
         }
         h2 {
             color: #333;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .achievement-card {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
         }
         .achievement-card img {
             width: 100px;
             height: 100px;
+            margin-bottom: 10px;
         }
         .achievement-card h4 {
-            margin: 0;
             font-size: 16px;
-            text-align: center;
-        }
-        #chart-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
         }
         .chart-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             margin-top: 30px;
         }
         .chart-container div {
             width: 48%;
         }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
+        #training-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
-        .training-images img {
+        #training-images img {
             width: 100px;
             height: 100px;
-            margin: 5px;
+            margin: 10px;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 10px;
-            margin: 5px 0;
+            margin: 10px 0;
             font-size: 14px;
             border-radius: 4px;
             border: 1px solid #ddd;
@@ -106,6 +107,12 @@
         }
         .contact-form button:hover {
             background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
@@ -131,23 +138,21 @@
         <h4>Best Trainer Award</h4>
     </div>
 
-    <div id="chart-container">
-        <div class="chart-container">
-            <div>
-                <h3>Training Effectiveness - FY-23-24</h3>
-                <canvas id="trainingEffectivenessChart"></canvas>
-            </div>
-            <div>
-                <h3>Training Effectiveness - FY-24-25</h3>
-                <canvas id="trainingEffectivenessChartFY25"></canvas>
-            </div>
+    <div class="chart-container">
+        <div>
+            <h3>Training Effectiveness - FY-23-24</h3>
+            <canvas id="trainingEffectivenessChart"></canvas>
+        </div>
+        <div>
+            <h3>Training Effectiveness - FY-24-25</h3>
+            <canvas id="trainingEffectivenessChartFY25"></canvas>
         </div>
     </div>
 </section>
 
 <section id="training">
     <h2>Training Insights</h2>
-    <div class="training-images">
+    <div id="training-images">
         <img src="training1.jpg" alt="Training Image 1">
         <img src="training2.jpg" alt="Training Image 2">
         <img src="training3.jpg" alt="Training Image 3">
@@ -163,29 +168,22 @@
         <img src="training13.jpg" alt="Training Image 13">
         <img src="training14.jpg" alt="Training Image 14">
         <img src="training15.jpg" alt="Training Image 15">
-        <img src="training16.jpg" alt="Training Image 16">
-        <img src="training17.jpg" alt="Training Image 17">
-        <img src="training18.jpg" alt="Training Image 18">
-        <img src="training19.jpg" alt="Training Image 19">
-        <img src="training20.jpg" alt="Training Image 20">
     </div>
 </section>
 
 <section id="rewards">
     <h2>Rewards & Recognition</h2>
-    <div class="rewards-section">
-        <div class="reward-card">
-            <img src="award1.jpg" alt="Award 1">
-            <h4>Leadership Excellence Award</h4>
-        </div>
-        <div class="reward-card">
-            <img src="award2.jpg" alt="Award 2">
-            <h4>Innovation in Learning Award</h4>
-        </div>
-        <div class="reward-card">
-            <img src="award3.jpg" alt="Award 3">
-            <h4>Best Trainer Award</h4>
-        </div>
+    <div class="reward-card">
+        <img src="reward1.jpg" alt="Reward 1">
+        <h4>Leadership Excellence Award</h4>
+    </div>
+    <div class="reward-card">
+        <img src="reward2.jpg" alt="Reward 2">
+        <h4>Innovation in Learning Award</h4>
+    </div>
+    <div class="reward-card">
+        <img src="reward3.jpg" alt="Reward 3">
+        <h4>Best Trainer Award</h4>
     </div>
 </section>
 
