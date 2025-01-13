@@ -3,227 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamsi Krishna - L&D Portfolio</title>
+    <meta name="description" content="Vamsi Krishna's professional portfolio showcasing expertise in Learning & Development, training achievements, and awards.">
+    <title>Vamsi Krishna - Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Basic Styling */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-            scroll-behavior: smooth;
+            font-family: 'Calibri', sans-serif;
+            font-size: 16px;
             line-height: 1.6;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
         }
 
-        /* Navigation Bar */
-        nav {
-            position: sticky;
-            top: 0;
-            background: linear-gradient(90deg, #1e90ff, #00bcd4);
-            color: #fff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        header, nav, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #142850;
+            color: white;
         }
 
         nav ul {
-            list-style: none;
             display: flex;
-            gap: 20px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
         }
 
         nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 8px 15px;
-            border-radius: 20px;
-            transition: background 0.3s;
-        }
-
-        nav ul li a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            color: #1e90ff;
-            margin-bottom: 20px;
-        }
-
-        section img {
-            display: block;
-            margin: 20px auto;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Banner */
-        .banner {
-            position: relative;
-            height: 70vh;
-            background: url('https://via.placeholder.com/1920x700?text=Welcome+to+My+Portfolio') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
             color: white;
+            text-decoration: none;
         }
 
-        .banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+        section {
+            padding: 40px 20px;
+            text-align: center;
         }
 
-        .banner-content {
-            position: relative;
-            z-index: 2;
+        h2 {
+            color: #142850;
+            font-size: 2.5rem;
         }
 
-        .banner h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .banner p {
-            font-size: 1.2rem;
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            margin: 50px auto;
-            padding: 0 20px;
-            width: 90%;
+        .graph-section {
             max-width: 800px;
+            margin: 0 auto;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 4px;
-            height: 100%;
-            background: #1e90ff;
-            transform: translateX(-50%);
-        }
-
-        .timeline-event {
-            position: relative;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            width: 45%;
-        }
-
-        .timeline-event:nth-child(odd) {
-            left: 5%;
-        }
-
-        .timeline-event:nth-child(even) {
-            left: 50%;
-        }
-
-        /* Infographics */
-        .infographic {
+        .awards, .training-gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
+            gap: 20px;
         }
 
-        .infographic div {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
+        .awards img, .training-gallery img {
             width: 200px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+            border-radius: 5px;
         }
 
-        .infographic div:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Contact Section */
-        .contact form {
+        .contact-form {
             max-width: 600px;
             margin: 0 auto;
             text-align: left;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .contact label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .contact input, .contact textarea {
+        .contact-form input, .contact-form textarea, .contact-form button {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
 
-        .contact button {
-            background: #1e90ff;
+        .contact-form button {
+            background-color: #1e90ff;
             color: white;
-            padding: 10px 15px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
             cursor: pointer;
-            transition: background 0.3s;
         }
 
-        .contact button:hover {
-            background: #0d75d9;
+        footer {
+            background-color: #142850;
+            color: white;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <h1>Vamsi Krishna Portfolio</h1>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#growth">Growth</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <!-- Include sections as needed -->
+
+<header>
+    <h1>Vamsi Krishna - Learning & Development Professional</h1>
+    <p>Empowering Talent | Transforming Brands | Driving Excellence</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#training-gallery">Training Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am Vamsi Krishna, a Learning & Development professional with a passion for upskilling teams and fostering organizational growth through strategic training programs and initiatives.</p>
+</section>
+
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="graph-section">
+        <canvas id="trainingChart"></canvas>
+    </div>
+</section>
+
+<section id="awards">
+    <h2>My Rewards</h2>
+    <div class="awards">
+        <img src="award1.jpg" alt="Award 1">
+        <img src="award2.jpg" alt="Award 2">
+        <img src="award3.jpg" alt="Award 3">
+        <img src="award4.jpg" alt="Award 4">
+        <img src="award5.jpg" alt="Award 5">
+    </div>
+</section>
+
+<section id="training-gallery">
+    <h2>Training Images</h2>
+    <div class="training-gallery">
+        <img src="training1.jpg" alt="Training 1">
+        <img src="training2.jpg" alt="Training 2">
+        <img src="training3.jpg" alt="Training 3">
+        <img src="training4.jpg" alt="Training 4">
+        <img src="training5.jpg" alt="Training 5">
+        <img src="training6.jpg" alt="Training 6">
+        <img src="training7.jpg" alt="Training 7">
+        <img src="training8.jpg" alt="Training 8">
+        <img src="training9.jpg" alt="Training 9">
+        <img src="training10.jpg" alt="Training 10">
+        <img src="training11.jpg" alt="Training 11">
+        <img src="training12.jpg" alt="Training 12">
+        <img src="training13.jpg" alt="Training 13">
+        <img src="training14.jpg" alt="Training 14">
+        <img src="training15.jpg" alt="Training 15">
+        <img src="training16.jpg" alt="Training 16">
+        <img src="training17.jpg" alt="Training 17">
+        <img src="training18.jpg" alt="Training 18">
+        <img src="training19.jpg" alt="Training 19">
+        <img src="training20.jpg" alt="Training 20">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Vamsi Krishna. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const ctx = document.getElementById('trainingChart').getContext('2d');
+    const trainingChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['FY 23-24', 'FY 24-25'],
+            datasets: [
+                {
+                    label: 'Trainings Conducted',
+                    data: [150, 180],
+                    backgroundColor: '#1e90ff',
+                },
+                {
+                    label: 'Employees Upskilled',
+                    data: [1200, 1500],
+                    backgroundColor: '#ffa500',
+                },
+                {
+                    label: 'Trainings Facilitated',
+                    data: [100, 130],
+                    backgroundColor: '#32cd32',
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+            },
+        },
+    });
+</script>
+
 </body>
 </html>
