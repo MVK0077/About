@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamsi Krishna - Learning & Development Portfolio</title>
+    <title>Vamsi Krishna - L&D Portfolio</title>
     <style>
         /* General Reset */
         * {
@@ -14,9 +14,47 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f9f9ff;
             color: #333;
             line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #1e90ff;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #0d75d9;
         }
 
         /* Banner Section */
@@ -38,8 +76,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
+            background: rgba(0, 0, 0, 0.6);
         }
 
         .banner-content {
@@ -62,7 +99,7 @@
             display: flex;
             overflow: hidden;
             position: relative;
-            margin: 20px 0;
+            margin: 30px 0;
         }
 
         .scrolling-gallery img {
@@ -87,6 +124,7 @@
         /* Section Styles */
         section {
             padding: 50px 20px;
+            text-align: center;
         }
 
         section h2 {
@@ -106,9 +144,8 @@
         /* Growth Section */
         .growth {
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
         }
 
         .timeline {
@@ -134,7 +171,6 @@
             position: relative;
             margin-bottom: 20px;
             padding-left: 60px;
-            text-align: left;
         }
 
         .timeline-event:nth-child(even) {
@@ -143,61 +179,35 @@
             padding-right: 60px;
         }
 
-        .timeline-event::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            background: #1E90FF;
-            border-radius: 50%;
-            transform: translateX(-50%);
-        }
-
-        .timeline-event:nth-child(even)::before {
-            left: auto;
-            right: 50%;
-            transform: translateX(50%);
-        }
-
         .timeline-content {
             background: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 15px;
-            position: relative;
         }
 
-        .timeline-content h3 {
-            margin-bottom: 10px;
-        }
-
-        .timeline-content p {
-            margin: 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .timeline-event::before {
-                left: 40px;
-            }
-
-            .timeline-event:nth-child(even)::before {
-                right: auto;
-                left: 40px;
-                transform: translateX(0);
-            }
-
-            .timeline-event {
-                text-align: left;
-                padding-left: 60px;
-                padding-right: 0;
-            }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e90ff;
+            color: #fff;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Navigation -->
+    <nav>
+        <div>Portfolio</div>
+        <ul>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#growth">Growth Path</a></li>
+            <li><a href="#gallery">Training Gallery</a></li>
+            <li><a href="#awards">Awards</a></li>
+        </ul>
+    </nav>
 
     <!-- Banner Section -->
     <section class="banner">
@@ -207,19 +217,15 @@
         </div>
     </section>
 
-    <!-- Scrolling Gallery -->
-    <section class="scrolling-gallery">
-        <div class="gallery-wrapper">
-            <img src="https://via.placeholder.com/800x400?text=Training+1" alt="Training Image 1">
-            <img src="https://via.placeholder.com/800x400?text=Training+2" alt="Training Image 2">
-            <img src="https://via.placeholder.com/800x400?text=Reward+1" alt="Reward Image 1">
-            <img src="https://via.placeholder.com/800x400?text=Reward+2" alt="Reward Image 2">
-        </div>
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2><img src="https://via.placeholder.com/50" alt="Achievements Icon"> Achievements</h2>
+        <p>FY 23-24: Trained 500 Employees | FY 24-25: Upskilled 700 Employees</p>
     </section>
 
-    <!-- Growth Section -->
-    <section class="growth">
-        <h2><img src="https://via.placeholder.com/50?text=Growth" alt="Growth Icon"> Growth Path</h2>
+    <!-- Growth Path Section -->
+    <section id="growth">
+        <h2><img src="https://via.placeholder.com/50" alt="Growth Icon"> Growth Path</h2>
         <div class="timeline">
             <div class="timeline-event">
                 <div class="timeline-content">
@@ -227,26 +233,7 @@
                     <p>Began as a Training Coordinator.</p>
                 </div>
             </div>
-            <div class="timeline-event">
-                <div class="timeline-content">
-                    <h3>2015: Manager Role</h3>
-                    <p>Promoted to Training Manager.</p>
-                </div>
-            </div>
-            <div class="timeline-event">
-                <div class="timeline-content">
-                    <h3>2020: L&D Head</h3>
-                    <p>Led company-wide training initiatives.</p>
-                </div>
-            </div>
-            <div class="timeline-event">
-                <div class="timeline-content">
-                    <h3>2025: Achieved Excellence</h3>
-                    <p>Recognized for transformational projects.</p>
-                </div>
-            </div>
         </div>
     </section>
-
 </body>
 </html>
