@@ -16,7 +16,6 @@
             font-family: 'Arial', sans-serif;
             background-color: #f9f9ff;
             color: #333;
-            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
@@ -26,7 +25,7 @@
             top: 0;
             background: #1e90ff;
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -38,10 +37,6 @@
             list-style: none;
             display: flex;
             gap: 15px;
-        }
-
-        nav ul li {
-            display: inline;
         }
 
         nav ul li a {
@@ -57,11 +52,32 @@
             background: #0d75d9;
         }
 
-        /* Banner Section */
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: black;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section img {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Banner */
         .banner {
             position: relative;
-            height: 60vh;
-            background: url('https://via.placeholder.com/1920x600?text=Banner+Image') no-repeat center center/cover;
+            height: 70vh;
+            background: url('https://via.placeholder.com/1920x700?text=Welcome+to+My+Portfolio') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -94,61 +110,11 @@
             margin-top: 10px;
         }
 
-        /* Scrolling Gallery */
-        .scrolling-gallery {
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            margin: 30px 0;
-        }
-
-        .scrolling-gallery img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.5s ease;
-        }
-
-        @keyframes scrollImages {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
-            100% { transform: translateX(0); }
-        }
-
-        .gallery-wrapper {
-            display: flex;
-            animation: scrollImages 20s infinite;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            color: black;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        section h2 img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        /* Growth Section */
-        .growth {
+        /* Timeline */
+        .timeline {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .timeline {
             position: relative;
             margin: 50px 0;
             padding: 0 20px;
@@ -186,13 +152,68 @@
             padding: 15px;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
+        /* Infographics */
+        .infographic {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .infographic div {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
             padding: 20px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Awards Section */
+        .awards img {
+            display: inline-block;
+            margin: 10px;
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Contact Section */
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .contact label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact button {
             background: #1e90ff;
             color: #fff;
-            margin-top: 20px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background: #0d75d9;
         }
     </style>
 </head>
@@ -202,14 +223,17 @@
     <nav>
         <div>Portfolio</div>
         <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#growth">Growth</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#growth">Growth Path</a></li>
-            <li><a href="#gallery">Training Gallery</a></li>
-            <li><a href="#awards">Awards</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#rewards">Rewards</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Banner Section -->
+    <!-- Banner -->
     <section class="banner">
         <div class="banner-content">
             <h1>Vamsi Krishna</h1>
@@ -217,23 +241,33 @@
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <h2><img src="https://via.placeholder.com/50" alt="Achievements Icon"> Achievements</h2>
-        <p>FY 23-24: Trained 500 Employees | FY 24-25: Upskilled 700 Employees</p>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A passionate L&D leader with a proven track record in enhancing employee skills, fostering growth, and driving organizational success.</p>
     </section>
 
-    <!-- Growth Path Section -->
+    <!-- Growth Section -->
     <section id="growth">
-        <h2><img src="https://via.placeholder.com/50" alt="Growth Icon"> Growth Path</h2>
+        <h2>Growth Timeline</h2>
         <div class="timeline">
             <div class="timeline-event">
                 <div class="timeline-content">
-                    <h3>2010: Career Start</h3>
-                    <p>Began as a Training Coordinator.</p>
+                    <h3>2010</h3>
+                    <p>Started career as Training Coordinator</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+    </section>
+
 </body>
 </html>
