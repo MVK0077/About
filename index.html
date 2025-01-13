@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamsi Krishna - L&D Achievements & More</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Vamsi Krishna - L&D Achievements</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -15,6 +14,7 @@
             color: #333;
             background-color: #f4f4f4;
         }
+
         header {
             position: relative;
             background-image: url('https://drive.google.com/uc?id=1F-9x8MqPPKnH4Z-s4qt3QM8nn0-xW4v-');
@@ -29,6 +29,7 @@
             align-items: center;
             z-index: 1;
         }
+
         header::before {
             content: '';
             position: absolute;
@@ -39,55 +40,67 @@
             background: rgba(0, 0, 0, 0.4);
             z-index: 0;
         }
+
         header h1 {
             font-size: 36px;
             margin: 0;
             z-index: 1;
         }
+
         header p {
             font-size: 20px;
             z-index: 1;
         }
+
         section {
             padding: 20px;
             margin: 20px;
         }
+
         h2 {
             color: #333;
             text-align: center;
             margin-bottom: 20px;
         }
+
         .achievement-card {
             display: inline-block;
             margin: 10px;
             text-align: center;
         }
+
         .achievement-card img {
             width: 100px;
             height: 100px;
             margin-bottom: 10px;
         }
+
         .achievement-card h4 {
             font-size: 16px;
         }
+
         .chart-container {
             display: flex;
             justify-content: space-around;
             margin-top: 30px;
         }
+
         .chart-container div {
             width: 48%;
         }
+
         #training-images {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
         }
+
         #training-images img {
             width: 100px;
             height: 100px;
             margin: 10px;
         }
+
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 10px;
@@ -96,6 +109,7 @@
             border-radius: 4px;
             border: 1px solid #ddd;
         }
+
         .contact-form button {
             padding: 10px 20px;
             font-size: 16px;
@@ -105,100 +119,119 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
         .contact-form button:hover {
             background-color: #45a049;
         }
+
         footer {
             text-align: center;
             padding: 20px;
             background-color: #333;
             color: white;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Vamsi Krishna - L&D Achievements</h1>
-    <p>Building the Future of Learning and Development</p>
+    <div class="container">
+        <h1>Vamsi Krishna - L&D Achievements</h1>
+        <p>Building the Future of Learning and Development</p>
+    </div>
 </header>
 
 <section id="achievements">
-    <h2>Key Achievements in FY-23-24 & FY-24-25</h2>
-    <div class="achievement-card">
-        <img src="award1.jpg" alt="Award 1">
-        <h4>Leadership Excellence Award</h4>
-    </div>
-    <div class="achievement-card">
-        <img src="award2.jpg" alt="Award 2">
-        <h4>Innovation in Learning Award</h4>
-    </div>
-    <div class="achievement-card">
-        <img src="award3.jpg" alt="Award 3">
-        <h4>Best Trainer Award</h4>
-    </div>
-
-    <div class="chart-container">
-        <div>
-            <h3>Training Effectiveness - FY-23-24</h3>
-            <canvas id="trainingEffectivenessChart"></canvas>
+    <div class="container">
+        <h2>Key Achievements in FY-23-24 & FY-24-25</h2>
+        <div class="achievement-card">
+            <img src="award1.jpg" alt="Award 1">
+            <h4>Leadership Excellence Award</h4>
         </div>
-        <div>
-            <h3>Training Effectiveness - FY-24-25</h3>
-            <canvas id="trainingEffectivenessChartFY25"></canvas>
+        <div class="achievement-card">
+            <img src="award2.jpg" alt="Award 2">
+            <h4>Innovation in Learning Award</h4>
+        </div>
+        <div class="achievement-card">
+            <img src="award3.jpg" alt="Award 3">
+            <h4>Best Trainer Award</h4>
+        </div>
+
+        <div class="chart-container">
+            <div>
+                <h3>Training Effectiveness - FY-23-24</h3>
+                <canvas id="trainingEffectivenessChart"></canvas>
+            </div>
+            <div>
+                <h3>Training Effectiveness - FY-24-25</h3>
+                <canvas id="trainingEffectivenessChartFY25"></canvas>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="training">
-    <h2>Training Insights</h2>
-    <div id="training-images">
-        <img src="training1.jpg" alt="Training Image 1">
-        <img src="training2.jpg" alt="Training Image 2">
-        <img src="training3.jpg" alt="Training Image 3">
-        <img src="training4.jpg" alt="Training Image 4">
-        <img src="training5.jpg" alt="Training Image 5">
-        <img src="training6.jpg" alt="Training Image 6">
-        <img src="training7.jpg" alt="Training Image 7">
-        <img src="training8.jpg" alt="Training Image 8">
-        <img src="training9.jpg" alt="Training Image 9">
-        <img src="training10.jpg" alt="Training Image 10">
-        <img src="training11.jpg" alt="Training Image 11">
-        <img src="training12.jpg" alt="Training Image 12">
-        <img src="training13.jpg" alt="Training Image 13">
-        <img src="training14.jpg" alt="Training Image 14">
-        <img src="training15.jpg" alt="Training Image 15">
+    <div class="container">
+        <h2>Training Insights</h2>
+        <div id="training-images">
+            <img src="training1.jpg" alt="Training Image 1">
+            <img src="training2.jpg" alt="Training Image 2">
+            <img src="training3.jpg" alt="Training Image 3">
+            <img src="training4.jpg" alt="Training Image 4">
+            <img src="training5.jpg" alt="Training Image 5">
+            <img src="training6.jpg" alt="Training Image 6">
+            <img src="training7.jpg" alt="Training Image 7">
+            <img src="training8.jpg" alt="Training Image 8">
+            <img src="training9.jpg" alt="Training Image 9">
+            <img src="training10.jpg" alt="Training Image 10">
+            <img src="training11.jpg" alt="Training Image 11">
+            <img src="training12.jpg" alt="Training Image 12">
+            <img src="training13.jpg" alt="Training Image 13">
+            <img src="training14.jpg" alt="Training Image 14">
+            <img src="training15.jpg" alt="Training Image 15">
+        </div>
     </div>
 </section>
 
 <section id="rewards">
-    <h2>Rewards & Recognition</h2>
-    <div class="reward-card">
-        <img src="reward1.jpg" alt="Reward 1">
-        <h4>Leadership Excellence Award</h4>
-    </div>
-    <div class="reward-card">
-        <img src="reward2.jpg" alt="Reward 2">
-        <h4>Innovation in Learning Award</h4>
-    </div>
-    <div class="reward-card">
-        <img src="reward3.jpg" alt="Reward 3">
-        <h4>Best Trainer Award</h4>
+    <div class="container">
+        <h2>Rewards & Recognition</h2>
+        <div class="achievement-card">
+            <img src="reward1.jpg" alt="Reward 1">
+            <h4>Leadership Excellence Award</h4>
+        </div>
+        <div class="achievement-card">
+            <img src="reward2.jpg" alt="Reward 2">
+            <h4>Innovation in Learning Award</h4>
+        </div>
+        <div class="achievement-card">
+            <img src="reward3.jpg" alt="Reward 3">
+            <h4>Best Trainer Award</h4>
+        </div>
     </div>
 </section>
 
 <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+    <div class="container">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2025 Vamsi Krishna. All Rights Reserved.</p>
+    <div class="container">
+        <p>&copy; 2025 Vamsi Krishna. All Rights Reserved.</p>
+    </div>
 </footer>
 
 <script>
