@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L&D Head Portfolio – Vamsi Krishna</title>
+    <title>L&D Head Portfolio – Amardeep Singh </title>
     <style>
         /* General Reset */
         * {
@@ -17,7 +17,6 @@
             background-color: #f4f4f9;
             color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         /* Full Screen Hero Section */
@@ -49,14 +48,14 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
-            color: #1E90FF; /* Light Blue */
+            font-size: 3.5rem;
+            color: black;
             font-weight: 700;
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.9);
         }
 
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-top: 10px;
             font-weight: 300;
         }
@@ -97,9 +96,22 @@
 
         .about h2 {
             font-size: 2.5rem;
-            color: #2e3b4e;
+            color: black;
             text-align: center;
             margin-bottom: 20px;
+        }
+
+        .about .profile-img {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #1E90FF;
         }
 
         .about p {
@@ -116,7 +128,7 @@
 
         .skills h2 {
             font-size: 2.5rem;
-            color: #2e3b4e;
+            color: black;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -142,9 +154,15 @@
 
         .achievements h2 {
             font-size: 2.5rem;
-            color: #2e3b4e;
+            color: black;
             text-align: center;
             margin-bottom: 20px;
+        }
+
+        .achievement-infographic {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
 
         .achievement-card {
@@ -158,12 +176,40 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .achievement-card img {
-            width: 100px;
+        /* Case Studies Section */
+        .case-studies {
+            background-color: #fff;
+            padding: 60px 20px;
+        }
+
+        .case-studies h2 {
+            font-size: 2.5rem;
+            color: black;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        /* Gallery Section (for Training Images) */
+        .case-studies ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .case-studies ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .case-studies ul li a {
+            text-decoration: none;
+            color: #1E90FF;
+            font-weight: 600;
+        }
+
+        .case-studies ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Gallery Section */
         .gallery {
             display: flex;
             justify-content: center;
@@ -176,7 +222,7 @@
 
         .gallery img {
             margin: 0 10px;
-            height: 250px;
+            height: 300px;
             width: auto;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -190,74 +236,13 @@
 
         .awards h2 {
             font-size: 2.5rem;
-            color: #2e3b4e;
+            color: black;
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .award-gallery {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: auto;
-        }
-
-        .award-gallery img {
-            margin: 0 15px;
-            height: 250px;
-            width: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: #2e3b4e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #1E90FF;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .skills ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .achievement-card {
-                width: 80%;
-                margin-bottom: 20px;
-            }
-
-            .gallery {
-                flex-direction: column;
-            }
-
-            .award-gallery {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 480px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -266,13 +251,13 @@
                 font-size: 1rem;
             }
 
-            nav a {
-                font-size: 1rem;
-                margin: 0 10px;
+            .skills ul {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .achievement-card {
-                width: 100%;
+            .gallery {
+                flex-direction: column;
             }
         }
     </style>
@@ -284,9 +269,9 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#achievements">Achievements</a>
+        <a href="#case-studies">Case Studies</a>
         <a href="#gallery">Gallery</a>
         <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Hero Section -->
@@ -300,8 +285,11 @@
     <!-- About Section -->
     <section id="about" class="about">
         <h2>About Me</h2>
+        <div class="profile-img">
+            <img src="https://via.placeholder.com/150?text=Upload+Profile+Image" alt="Profile Image">
+        </div>
         <p>
-            With over [X] years of experience in Learning & Development, I am dedicated to designing impactful training programs that drive organizational growth. My focus on leadership, skill development, and employee engagement has led to the successful transformation of various learning ecosystems.
+            With extensive experience in Learning & Development, I create impactful training programs driving growth and excellence.
         </p>
     </section>
 
@@ -312,58 +300,24 @@
             <li>Leadership Development</li>
             <li>Training Program Management</li>
             <li>Employee Engagement</li>
-            <li>Learning Strategies</li>
-            <li>Performance Improvement</li>
-            <li>Change Management</li>
         </ul>
     </section>
 
     <!-- Achievements Section -->
     <section id="achievements" class="achievements">
         <h2>Achievements</h2>
-        <div class="achievement-card">
-            <img src="https://via.placeholder.com/100?text=Hours" alt="Training Hours Icon">
-            <h3>Training Hours</h3>
-            <p>5000+ hours of training delivered</p>
-        </div>
-        <div class="achievement-card">
-            <img src="https://via.placeholder.com/100?text=Upskilled" alt="Employees Upskilled Icon">
-            <h3>Employees Upskilled</h3>
-            <p>Over 1500 employees upskilled</p>
-        </div>
-        <div class="achievement-card">
-            <img src="https://via.placeholder.com/100?text=Growth" alt="Employee Growth Icon">
-            <h3>Employee Growth</h3>
-            <p>30% growth in employee performance (FY 23-24 to FY 24-25)</p>
+        <div class="achievement-infographic">
+            <div class="achievement-card">
+                <p>FY 23-24</p>
+                <p>Hours Trained: 1500+</p>
+            </div>
+            <div class="achievement-card">
+                <p>FY 24-25</p>
+                <p>Growth: 35%</p>
+            </div>
         </div>
     </section>
 
-    <!-- Gallery Section (for Training Images) -->
-    <section id="gallery">
-        <h2>Training Gallery</h2>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/350x250?text=Training+Session+1" alt="Training Image 1">
-            <img src="https://via.placeholder.com/350x250?text=Training+Session+2" alt="Training Image 2">
-            <img src="https://via.placeholder.com/350x250?text=Training+Session+3" alt="Training Image 3">
-            <!-- Add more images as needed -->
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards" class="awards">
-        <h2>Awards</h2>
-        <div class="award-gallery">
-            <img src="https://via.placeholder.com/250x250?text=Award+1" alt="Award Image 1">
-            <img src="https://via.placeholder.com/250x250?text=Award+2" alt="Award Image 2">
-            <img src="https://via.placeholder.com/250x250?text=Award+3" alt="Award Image 3">
-            <!-- Add more awards as needed -->
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>For more information, contact me at <a href="mailto:vamsikrishna@email.com">vamsikrishna@email.com</a></p>
-    </footer>
-
-</body>
-</html>
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies">
+        <h2>Case Studies</h
