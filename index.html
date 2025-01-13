@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L&D Head Portfolio – Amardeep Singh </title>
+    <title>Vamsi Krishna - Learning & Development Portfolio</title>
     <style>
         /* General Reset */
         * {
@@ -19,305 +19,234 @@
             line-height: 1.6;
         }
 
-        /* Full Screen Hero Section */
-        .hero {
-            background-image: url('https://via.placeholder.com/1920x1080?text=L%26D+Excellence'); /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
+        /* Banner Section */
+        .banner {
+            position: relative;
+            height: 60vh;
+            background: url('https://via.placeholder.com/1920x600?text=Banner+Image') no-repeat center center/cover;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
             color: white;
-            position: relative;
         }
 
-        .hero::before {
-            content: "";
+        .banner::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
 
-        .hero .content {
+        .banner-content {
+            position: relative;
             z-index: 2;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            color: black;
-            font-weight: 700;
-            text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.9);
+        .banner h1 {
+            font-size: 3rem;
+            color: #fff;
         }
 
-        .hero p {
+        .banner p {
             font-size: 1.3rem;
             margin-top: 10px;
-            font-weight: 300;
         }
 
-        /* Navigation Bar */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* Scrolling Gallery */
+        .scrolling-gallery {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .scrolling-gallery img {
             width: 100%;
-            background-color: #2e3b4e;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            z-index: 9999;
+            height: auto;
+            transition: transform 0.5s ease;
         }
 
-        nav a {
-            color: #1E90FF;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 600;
+        @keyframes scrollImages {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .gallery-wrapper {
+            display: flex;
+            animation: scrollImages 20s infinite;
         }
 
-        /* Sections */
+        /* Section Styles */
         section {
-            padding: 80px 20px;
+            padding: 50px 20px;
         }
 
-        /* About Section */
-        .about {
-            background-color: #fff;
-        }
-
-        .about h2 {
+        section h2 {
             font-size: 2.5rem;
             color: black;
-            text-align: center;
             margin-bottom: 20px;
-        }
-
-        .about .profile-img {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .about img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #1E90FF;
-        }
-
-        .about p {
-            font-size: 1.2rem;
-            text-align: center;
-            line-height: 1.8;
-        }
-
-        /* Skills Section */
-        .skills {
-            background-color: #fff;
-            padding: 60px 20px;
-        }
-
-        .skills h2 {
-            font-size: 2.5rem;
-            color: black;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .skills ul {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .skills li {
-            font-size: 1.2rem;
-            color: #333;
-            font-weight: 600;
-        }
-
-        /* Achievements Section */
-        .achievements {
-            background-color: #e6f7ff; /* Light Blue Background */
-            padding: 60px 20px;
-        }
-
-        .achievements h2 {
-            font-size: 2.5rem;
-            color: black;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .achievement-infographic {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .achievement-card {
-            background-color: #1E90FF; /* Light Blue */
-            color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            width: 250px;
-            margin: 10px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Case Studies Section */
-        .case-studies {
-            background-color: #fff;
-            padding: 60px 20px;
-        }
-
-        .case-studies h2 {
-            font-size: 2.5rem;
-            color: black;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .case-studies ul {
-            list-style: none;
             text-align: center;
         }
 
-        .case-studies ul li {
-            font-size: 1.2rem;
-            margin: 10px 0;
+        section h2 img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
         }
 
-        .case-studies ul li a {
-            text-decoration: none;
-            color: #1E90FF;
-            font-weight: 600;
-        }
-
-        .case-studies ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Gallery Section */
-        .gallery {
+        /* Growth Section */
+        .growth {
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow-x: auto;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #f5f5f5;
+            flex-direction: column;
         }
 
-        .gallery img {
-            margin: 0 10px;
-            height: 300px;
-            width: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .timeline {
+            position: relative;
+            margin: 50px 0;
+            padding: 0 20px;
+            width: 100%;
+            max-width: 800px;
         }
 
-        /* Awards Section */
-        .awards {
-            background-color: #f4f4f9;
-            padding: 60px 20px;
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: #1E90FF;
+            transform: translateX(-50%);
         }
 
-        .awards h2 {
-            font-size: 2.5rem;
-            color: black;
-            text-align: center;
+        .timeline-event {
+            position: relative;
             margin-bottom: 20px;
+            padding-left: 60px;
+            text-align: left;
+        }
+
+        .timeline-event:nth-child(even) {
+            text-align: right;
+            padding-left: 0;
+            padding-right: 60px;
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #1E90FF;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-event:nth-child(even)::before {
+            left: auto;
+            right: 50%;
+            transform: translateX(50%);
+        }
+
+        .timeline-content {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            position: relative;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            margin: 0;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .timeline-event::before {
+                left: 40px;
             }
 
-            .hero p {
-                font-size: 1rem;
+            .timeline-event:nth-child(even)::before {
+                right: auto;
+                left: 40px;
+                transform: translateX(0);
             }
 
-            .skills ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .gallery {
-                flex-direction: column;
+            .timeline-event {
+                text-align: left;
+                padding-left: 60px;
+                padding-right: 0;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#case-studies">Case Studies</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#awards">Awards</a>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="content">
-            <h1>Vamsi Krishna – Head of Learning & Development</h1>
-            <p>Empowering Organizations Through Strategic Learning Solutions</p>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Vamsi Krishna</h1>
+            <p>Empowering Growth Through Learning & Development</p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="profile-img">
-            <img src="https://via.placeholder.com/150?text=Upload+Profile+Image" alt="Profile Image">
+    <!-- Scrolling Gallery -->
+    <section class="scrolling-gallery">
+        <div class="gallery-wrapper">
+            <img src="https://via.placeholder.com/800x400?text=Training+1" alt="Training Image 1">
+            <img src="https://via.placeholder.com/800x400?text=Training+2" alt="Training Image 2">
+            <img src="https://via.placeholder.com/800x400?text=Reward+1" alt="Reward Image 1">
+            <img src="https://via.placeholder.com/800x400?text=Reward+2" alt="Reward Image 2">
         </div>
-        <p>
-            With extensive experience in Learning & Development, I create impactful training programs driving growth and excellence.
-        </p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Leadership Development</li>
-            <li>Training Program Management</li>
-            <li>Employee Engagement</li>
-        </ul>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
-        <h2>Achievements</h2>
-        <div class="achievement-infographic">
-            <div class="achievement-card">
-                <p>FY 23-24</p>
-                <p>Hours Trained: 1500+</p>
+    <!-- Growth Section -->
+    <section class="growth">
+        <h2><img src="https://via.placeholder.com/50?text=Growth" alt="Growth Icon"> Growth Path</h2>
+        <div class="timeline">
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <h3>2010: Career Start</h3>
+                    <p>Began as a Training Coordinator.</p>
+                </div>
             </div>
-            <div class="achievement-card">
-                <p>FY 24-25</p>
-                <p>Growth: 35%</p>
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <h3>2015: Manager Role</h3>
+                    <p>Promoted to Training Manager.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <h3>2020: L&D Head</h3>
+                    <p>Led company-wide training initiatives.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <h3>2025: Achieved Excellence</h3>
+                    <p>Recognized for transformational projects.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section id="case-studies" class="case-studies">
-        <h2>Case Studies</h
+</body>
+</html>
