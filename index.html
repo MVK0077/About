@@ -14,16 +14,17 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f9f9ff;
+            background-color: #f5f7fa;
             color: #333;
             scroll-behavior: smooth;
+            line-height: 1.6;
         }
 
         /* Navigation Bar */
         nav {
             position: sticky;
             top: 0;
-            background: #1e90ff;
+            background: linear-gradient(90deg, #1e90ff, #00bcd4);
             color: #fff;
             padding: 15px 20px;
             display: flex;
@@ -36,7 +37,7 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         nav ul li a {
@@ -44,12 +45,12 @@
             text-decoration: none;
             font-size: 1rem;
             padding: 8px 15px;
-            border-radius: 5px;
+            border-radius: 20px;
             transition: background 0.3s;
         }
 
         nav ul li a:hover {
-            background: #0d75d9;
+            background: rgba(255, 255, 255, 0.2);
         }
 
         /* Section Styles */
@@ -60,16 +61,16 @@
 
         section h2 {
             font-size: 2.5rem;
-            color: black;
+            color: #1e90ff;
             margin-bottom: 20px;
-            text-align: center;
         }
 
         section img {
+            display: block;
             margin: 20px auto;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
@@ -92,7 +93,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
         }
 
         .banner-content {
@@ -102,23 +103,19 @@
 
         .banner h1 {
             font-size: 3rem;
-            color: #fff;
+            margin-bottom: 10px;
         }
 
         .banner p {
-            font-size: 1.3rem;
-            margin-top: 10px;
+            font-size: 1.2rem;
         }
 
         /* Timeline */
         .timeline {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             position: relative;
-            margin: 50px 0;
+            margin: 50px auto;
             padding: 0 20px;
-            width: 100%;
+            width: 90%;
             max-width: 800px;
         }
 
@@ -127,38 +124,37 @@
             position: absolute;
             left: 50%;
             top: 0;
-            height: 100%;
             width: 4px;
-            background: #1E90FF;
+            height: 100%;
+            background: #1e90ff;
             transform: translateX(-50%);
         }
 
         .timeline-event {
             position: relative;
-            margin-bottom: 20px;
-            padding-left: 60px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 45%;
+        }
+
+        .timeline-event:nth-child(odd) {
+            left: 5%;
         }
 
         .timeline-event:nth-child(even) {
-            text-align: right;
-            padding-left: 0;
-            padding-right: 60px;
-        }
-
-        .timeline-content {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
+            left: 50%;
         }
 
         /* Infographics */
         .infographic {
             display: flex;
             flex-wrap: wrap;
+            gap: 20px;
             justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
         }
 
         .infographic div {
@@ -168,33 +164,32 @@
             padding: 20px;
             text-align: center;
             width: 200px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        /* Awards Section */
-        .awards img {
-            display: inline-block;
-            margin: 10px;
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
+        .infographic div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         /* Contact Section */
         .contact form {
-            max-width: 500px;
-            margin: auto;
+            max-width: 600px;
+            margin: 0 auto;
             text-align: left;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .contact label {
             display: block;
             margin-bottom: 5px;
-            font-weight: bold.
             font-weight: bold;
         }
 
-        .contact input, .contact textarea, .contact button {
+        .contact input, .contact textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -205,9 +200,12 @@
         .contact button {
             background: #1e90ff;
             color: white;
+            padding: 10px 15px;
             font-size: 1rem;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background 0.3s;
         }
 
         .contact button:hover {
@@ -216,118 +214,16 @@
     </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav>
-    <h1>Vamsi Krishna Portfolio</h1>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#growth">Growth</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#case-studies">Case Studies</a></li>
-        <li><a href="#rewards">Rewards</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- Banner -->
-<section class="banner">
-    <div class="banner-content">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Your Partner in Learning & Development Excellence</p>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <img src="https://via.placeholder.com/200?text=Profile+Picture" alt="Profile Picture">
-    <p>Hello! I am Vamsi Krishna, an L&D enthusiast focused on nurturing talent and driving growth.</p>
-</section>
-
-<!-- Growth Section -->
-<section id="growth">
-    <h2>Growth Timeline</h2>
-    <div class="timeline">
-        <div class="timeline-event">
-            <div class="timeline-content">
-                <h3>2024</h3>
-                <p>Launched SAP Training Initiative</p>
-            </div>
-        </div>
-        <div class="timeline-event">
-            <div class="timeline-content">
-                <h3>2023</h3>
-                <p>Awarded for Urja Idea Bank</p>
-            </div>
-        </div>
-        <!-- Add more events as needed -->
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="infographic">
-        <div>
-            <h3>Leadership</h3>
-            <p>Driving effective teams</p>
-        </div>
-        <div>
-            <h3>Instructional Design</h3>
-            <p>ADDIE & TTT Expertise</p>
-        </div>
-        <!-- Add more skills -->
-    </div>
-</section>
-
-<!-- Achievements Section -->
-<section id="achievements">
-    <h2>Achievements</h2>
-    <p>Highlighting key milestones:</p>
-    <ul>
-        <li>Received SPL NXT Leadership Award 2024</li>
-        <li>Completed 3-month Sales Workshop with 100% adherence</li>
-        <li>Podium Finish in Urja Contest</li>
-    </ul>
-</section>
-
-<!-- Case Studies Section -->
-<section id="case-studies">
-    <h2>Case Studies</h2>
-    <p>Examples of impactful projects:</p>
-    <ul>
-        <li><strong>Sales Workshop:</strong> Improved adherence by 80% post-training</li>
-        <li><strong>LinkedIn Learning Program:</strong> Achieved 100% utilization of licenses</li>
-    </ul>
-</section>
-
-<!-- Rewards Section -->
-<section id="rewards">
-    <h2>Rewards</h2>
-    <p>Recognized by the organization and beyond:</p>
-    <img src="https://via.placeholder.com/200?text=Award+1" alt="Award 1">
-    <img src="https://via.placeholder.com/200?text=Award+2" alt="Award 2">
-    <!-- Add more images -->
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Your Name">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Your Email">
-
-        <label for="message">Message:</label>
-        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
+    <nav>
+        <h1>Vamsi Krishna Portfolio</h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#growth">Growth</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Include sections as needed -->
 </body>
 </html>
