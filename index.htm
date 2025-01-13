@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vamsi Krishna's professional portfolio showcasing expertise in Learning & Development, training achievements, and case studies.">
+    <title>Vamsi Krishna - Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Calibri', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            background: url('banner.jpg') no-repeat center center/cover;
+            height: 400px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 20px 0;
+            margin: 0;
+            background-color: #142850;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #142850;
+            margin-bottom: 20px;
+        }
+
+        .case-studies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .case-study-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .case-study-card img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .case-study-card h3 {
+            margin: 15px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .case-study-card p {
+            margin: 0 15px 15px;
+            color: #555;
+        }
+
+        .case-study-card a {
+            display: block;
+            margin: 0 15px 15px;
+            text-decoration: none;
+            color: #1e90ff;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #142850;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Graph and Gallery Section */
+        .graph-section, .gallery-section {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .gallery-section img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: #1e90ff;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Vamsi Krishna</h1>
+    <p>Learning & Development Professional | Transforming Talent and Brands</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#training-gallery">Training Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am Vamsi Krishna, a Learning & Development professional with a passion for upskilling teams and fostering organizational growth through strategic training programs and initiatives.</p>
+</section>
+
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="graph-section">
+        <canvas id="trainingChart"></canvas>
+    </div>
+</section>
+
+<section id="case-studies">
+    <h2>Case Studies</h2>
+    <div class="case-studies">
+        <div class="case-study-card">
+            <img src="case1.jpg" alt="Case Study 1">
+            <h3>Sales Training Workshop</h3>
+            <p>Empowered the sales team with modern techniques.</p>
+            <a href="case1.html">Read More</a>
+        </div>
+        <div class="case-study-card">
+            <img src="case2.jpg" alt="Case Study 2">
+            <h3>Leadership Development</h3>
+            <p>Enhanced leadership capabilities across teams.</p>
+            <a href="case2.html">Read More</a>
+        </div>
+        <div class="case-study-card">
+            <img src="case3.jpg" alt="Case Study 3">
+            <h3>Technical Upskilling</h3>
+            <p>Upskilled employees in the latest technologies.</p>
+            <a href="case3.html">Read More</a>
+        </div>
+        <div class="case-study-card">
+            <img src="case4.jpg" alt="Case Study 4">
+            <h3>Employee Engagement</h3>
+            <p>Boosted engagement through targeted initiatives.</p>
+            <a href="case4.html">Read More</a>
+        </div>
+        <div class="case-study-card">
+            <img src="case5.jpg" alt="Case Study 5">
+            <h3>Performance Optimization</h3>
+            <p>Streamlined processes to enhance efficiency.</p>
+            <a href="case5.html">Read More</a>
+        </div>
+    </div>
+</section>
+
+<section id="training-gallery">
+    <h2>Training Gallery</h2>
+    <div class="gallery-section">
+        <img src="training1.jpg" alt="Training 1">
+        <img src="training2.jpg" alt="Training 2">
+        <img src="training3.jpg" alt="Training 3">
+        <!-- Add more images -->
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Vamsi Krishna. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const ctx = document.getElementById('trainingChart').getContext('2d');
+    const trainingChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['FY 23-24', 'FY 24-25'],
+            datasets: [
+                {
+                    label: 'Trainings Conducted',
+                    data: [150, 180],
+                    backgroundColor: '#1e90ff',
+                },
+                {
+                    label: 'Employees Upskilled',
+                    data: [1200, 1500],
+                    backgroundColor: '#ffa500',
+                },
+                {
+                    label: 'Trainings Facilitated',
+                    data: [100, 130],
+                    backgroundColor: '#32cd32',
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+            },
+        },
+    });
+</script>
+
+</body>
+</html>
