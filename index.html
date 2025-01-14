@@ -10,32 +10,20 @@
             font-family: Calibri, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #000; /* Set text color to black */
             background-color: #f4f4f4;
         }
 
         header {
             position: relative;
-            background-image: url('https://drive.google.com/uc?id=1F-9x8MqPPKnH4Z-s4qt3QM8nn0-xW4v-');
-            background-size: cover;
-            background-position: center;
-            color: white;
+            background-color: #ADD8E6; /* Light blue background */
+            color: black; /* Set header text color to black */
             text-align: center;
             padding: 80px 20px;
             height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
         }
 
         header h1 {
@@ -84,7 +72,7 @@
         }
 
         h2 {
-            color: #333;
+            color: black; /* Set section headers to black */
             text-align: center;
             margin-bottom: 20px;
         }
@@ -99,10 +87,6 @@
             width: 100px;
             height: 100px;
             margin-bottom: 10px;
-        }
-
-        .achievement-card h4 {
-            font-size: 16px;
         }
 
         .chart-container {
@@ -179,6 +163,7 @@
 
 <nav>
     <ul>
+        <li><a href="#about" class="tab-link">About Me</a></li>
         <li><a href="#achievements" class="tab-link">Achievements</a></li>
         <li><a href="#training" class="tab-link">Training Insights</a></li>
         <li><a href="#rewards" class="tab-link">Rewards</a></li>
@@ -186,19 +171,30 @@
     </ul>
 </nav>
 
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>
+            I am Vamsi Krishna, a dedicated Learning & Development professional passionate about enhancing skills and fostering growth. 
+            With a proven track record in designing impactful training programs, I strive to bring innovation and excellence to every initiative. 
+            My journey is fueled by the core values of trust, transparency, and governance.
+        </p>
+    </div>
+</section>
+
 <section id="achievements">
     <div class="container">
         <h2>Key Achievements in FY-23-24 & FY-24-25</h2>
         <div class="achievement-card">
-            <img src="award1.jpg" alt="Award 1">
+            <img src="award1.png" alt="Award 1">
             <h4>Leadership Excellence Award</h4>
         </div>
         <div class="achievement-card">
-            <img src="award2.jpg" alt="Award 2">
+            <img src="award2.png" alt="Award 2">
             <h4>Innovation in Learning Award</h4>
         </div>
         <div class="achievement-card">
-            <img src="award3.jpg" alt="Award 3">
+            <img src="award3.png" alt="Award 3">
             <h4>Best Trainer Award</h4>
         </div>
 
@@ -219,16 +215,9 @@
     <div class="container">
         <h2>Training Insights</h2>
         <div id="training-images">
-            <img src="training1.jpg" alt="Training Image 1">
-            <img src="training2.jpg" alt="Training Image 2">
-            <img src="training3.jpg" alt="Training Image 3">
-            <img src="training4.jpg" alt="Training Image 4">
-            <img src="training5.jpg" alt="Training Image 5">
-            <img src="training6.jpg" alt="Training Image 6">
-            <img src="training7.jpg" alt="Training Image 7">
-            <img src="training8.jpg" alt="Training Image 8">
-            <img src="training9.jpg" alt="Training Image 9">
-            <img src="training10.jpg" alt="Training Image 10">
+            <img src="training1.png" alt="Training Image 1">
+            <img src="training2.png" alt="Training Image 2">
+            <img src="training3.png" alt="Training Image 3">
         </div>
     </div>
 </section>
@@ -237,16 +226,12 @@
     <div class="container">
         <h2>Rewards & Recognition</h2>
         <div class="achievement-card">
-            <img src="reward1.jpg" alt="Reward 1">
+            <img src="reward1.png" alt="Reward 1">
             <h4>Leadership Excellence Award</h4>
         </div>
         <div class="achievement-card">
-            <img src="reward2.jpg" alt="Reward 2">
+            <img src="reward2.png" alt="Reward 2">
             <h4>Innovation in Learning Award</h4>
-        </div>
-        <div class="achievement-card">
-            <img src="reward3.jpg" alt="Reward 3">
-            <h4>Best Trainer Award</h4>
         </div>
     </div>
 </section>
@@ -270,63 +255,7 @@
 </footer>
 
 <script>
-    var ctx1 = document.getElementById('trainingEffectivenessChart').getContext('2d');
-    var trainingEffectivenessChart = new Chart(ctx1, {
-        type: 'bar',
-        data: {
-            labels: ['Sales', 'Tech', 'Leadership', 'Employee Engagement'],
-            datasets: [{
-                label: 'Training Effectiveness FY-23-24',
-                data: [80, 90, 85, 70],
-                backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#F1C40F'],
-                borderColor: ['#C0392B', '#27AE60', '#2980B9', '#F39C12'],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    var ctx2 = document.getElementById('trainingEffectivenessChartFY25').getContext('2d');
-    var trainingEffectivenessChartFY25 = new Chart(ctx2, {
-        type: 'bar',
-        data: {
-            labels: ['Sales', 'Tech', 'Leadership', 'Employee Engagement'],
-            datasets: [{
-                label: 'Training Effectiveness FY-24-25',
-                data: [85, 92, 88, 75],
-                backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#F1C40F'],
-                borderColor: ['#C0392B', '#27AE60', '#2980B9', '#F39C12'],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    // Tab navigation
-    document.querySelectorAll('.tab-link').forEach(function(tab) {
-        tab.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelectorAll('.tab-link').forEach(function(link) {
-                link.classList.remove('active');
-            });
-            tab.classList.add('active');
-        });
-    });
-
+    // Add your JavaScript here
 </script>
 
 </body>
